@@ -1,0 +1,124 @@
+/* Универсальный селектор */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Подключение и применение шрифта */
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Стили для шапки сайта */
+.header {
+    padding: 20px 0;
+}
+
+.header h1 {
+    font-size: 36px;
+    color: #000;
+    margin-bottom: 20px;
+}
+
+.header nav {
+    margin-bottom: 20px;
+}
+
+.header nav a {
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    color: #333;
+    margin-right: 25px;
+    transition: color 0.3s ease;
+}
+
+.header nav a:hover {
+    color: #ff6347; /* томатный цвет при наведении */
+}
+
+/* Стили для основного контента */
+.main .container > section {
+    margin-bottom: 40px;
+}
+
+.main h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+/* Блок "О нас" */
+.about-us img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.about-us p {
+    font-size: 16px;
+}
+
+/* Блок "Преимущества" */
+.advantages ul {
+    list-style-position: inside;
+    padding-left: 0;
+    font-size: 16px;
+}
+
+.advantages li {
+    margin-bottom: 10px;
+}
+
+/* Стили для таблицы */
+.popular-dishes table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.popular-dishes th, .popular-dishes td {
+    padding: 15px;
+    border: 1px solid #ddd;
+}
+
+.popular-dishes th {
+    font-weight: 700;
+}
+
+.popular-dishes tbody td:first-child {
+    text-align: center;
+}
+
+/* Стили для футера */
+.footer {
+    background-color: black;
+    color: white;
+    padding: 30px 0;
+    margin-top: 40px;
+}
+
+.footer p {
+    font-size: 16px;
+}
+
+.footer a {
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    color: white;
+    transition: color 0.3s ease;
+}
+
+.footer a:hover {
+    color: #ff6347; /* томатный цвет при наведении */
+}
