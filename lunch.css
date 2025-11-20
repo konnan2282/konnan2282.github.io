@@ -1,0 +1,243 @@
+/* --- СЕТКА БЛЮД --- */
+
+/* Блок с блюдами (section > div) */
+.dishes-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; /* 3 колонки */
+    gap: 10px;
+}
+
+/* --- КАРТОЧКА БЛЮДА --- */
+.dish-card {
+    background-color: #fff;
+    border-radius: 35px;
+    padding: 30px 40px;
+    filter: drop-shadow(17px 19px 24px rgba(0, 0, 0, 0.13));
+    cursor: pointer;
+    transition: border 0.2s ease;
+    border: 2px solid transparent; /* Резерв места под рамку */
+    
+    /* Flex для выравнивания содержимого внутри карточки */
+    display: flex;
+    flex-direction: column;
+    height: 100%; 
+    box-sizing: border-box;
+}
+
+/* Hover: Рамка */
+.dish-card:hover {
+    border: 2px solid tomato;
+}
+
+/* Hover: Изменение фона кнопки */
+.dish-card:hover .add-button {
+    background-color: tomato;
+    color: white;
+}
+
+/* Изображение */
+.dish-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 35px;
+    margin-bottom: 15px;
+    object-fit: cover;
+}
+
+/* Контейнер для текста (цена, название, вес) */
+.dish-details {
+    flex-grow: 1; /* Толкает кнопку вниз */
+    display: flex;
+    flex-direction: column;
+}
+
+.dish-card p {
+    margin: 5px 0;
+}
+
+.dish-price {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.dish-name {
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 5px;
+}
+
+.dish-weight {
+    color: gray;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+/* --- КНОПКА --- */
+.add-button {
+    background-color: #f1eee9;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 30px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    
+    /* Отступ сверху и выравнивание */
+    margin-top: auto; 
+    align-self: flex-start; 
+    width: 100%;
+}
+
+/* --- ФОРМА ЗАКАЗА (Стили для ЛР 3) --- */
+
+.order-section {
+    margin-top: 60px;
+    margin-bottom: 40px;
+}
+
+.order-title {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* Сетка формы (две колонки) */
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.form-column h3 {
+    margin-bottom: 20px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+/* Отступы между полями */
+.form-group {
+    margin-bottom: 20px;
+}
+
+/* Стили для лейблов */
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #333;
+}
+
+/* Стили для инпутов, селектов и текстового поля */
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"],
+.form-group input[type="time"],
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    background-color: #fff;
+}
+
+/* Чекбокс (особое выравнивание) */
+.checkbox-group {
+    display: flex;
+    align-items: center;
+}
+
+.checkbox-group input {
+    margin-right: 10px;
+    width: auto;
+}
+
+.checkbox-group label {
+    margin-bottom: 0;
+    display: inline;
+}
+
+/* Радио кнопки */
+.radio-option {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.radio-option input {
+    margin-right: 10px;
+}
+
+.radio-option label {
+    margin-bottom: 0;
+    font-weight: 400;
+}
+
+/* Подсказки (мелкий текст) */
+.hint {
+    display: block;
+    font-size: 12px;
+    color: #666;
+    margin-top: 5px;
+    font-style: italic;
+}
+
+/* Кнопки формы */
+.form-buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.btn-reset, .btn-submit {
+    padding: 12px;
+    background-color: #fff;
+    border: 1px solid #333;
+    border-radius: 5px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-submit {
+    font-weight: 700;
+}
+
+.btn-submit:hover {
+    background-color: tomato;
+    border-color: tomato;
+    color: white;
+}
+
+.btn-reset:hover {
+    background-color: #eee;
+}
+
+/* --- АДАПТИВНОСТЬ --- */
+
+/* <= 800px */
+@media (max-width: 800px) {
+    /* 2 колонки для блюд */
+    .dishes-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+    /* 1 колонка для формы */
+    .form-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}
+
+/* <= 600px */
+@media (max-width: 600px) {
+    /* 1 колонка для блюд */
+    .dishes-grid {
+        grid-template-columns: 1fr;
+    }
+}
