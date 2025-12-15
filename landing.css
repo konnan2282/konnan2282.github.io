@@ -1,0 +1,89 @@
+/* Основной шрифт */
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: #333;
+}
+
+/* Настройка Navbar */
+.navbar-brand {
+    font-size: 24px;
+    color: #333;
+}
+
+.nav-link {
+    font-weight: 600;
+    color: #555;
+    transition: color 0.3s;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: tomato !important;
+}
+
+/* Hero Section */
+.hero-section {
+    min-height: 100vh;
+    padding-top: 80px;
+    background: linear-gradient(135deg, #fff5f5 0%, #ffffff 100%);
+}
+
+.hero-img {
+    max-height: 400px;
+    object-fit: cover;
+    width: 100%;
+}
+
+/* Кнопки цвета Tomato */
+.bg-tomato {
+    background-color: tomato !important;
+}
+
+.text-tomato {
+    color: tomato !important;
+}
+
+.bg-tomato-soft {
+    background-color: rgba(255, 99, 71, 0.1);
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.btn-tomato {
+    background-color: tomato;
+    color: white;
+    border: 1px solid tomato;
+    transition: all 0.3s ease;
+}
+
+.btn-tomato:hover {
+    background-color: #e05a4f;
+    border-color: #e05a4f;
+    color: white;
+}
+
+/* Анимация при наведении на карточки */
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
+}
+
+/* Кастомизация полей ввода */
+.form-control:focus {
+    border-color: tomato;
+    box-shadow: 0 0 0 0.25rem rgba(255, 99, 71, 0.25);
+}
+
+.form-check-input:checked {
+    background-color: tomato;
+    border-color: tomato;
+}

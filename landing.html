@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Construct - Лендинг</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Подключение Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Подключение иконок Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    
+    <!-- Ваши кастомные стили для лендинга -->
+    <link rel="stylesheet" href="landing.css">
+</head>
+<body>
+
+    <!-- Навигация (Navbar) -->
+    <nav class="navbar navbar-expand-lg fixed-top bg-white shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="landing.html">Food Construct</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="landing.html">Главная</a></li>
+                    <li class="nav-item"><a class="nav-link" href="lunch.html">Собрать ланч</a></li>
+                    <li class="nav-item"><a class="nav-link" href="order.html">Оформить заказ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="orders.html">Мои заказы</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contacts">Контакты</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 1. Hero Section -->
+    <section class="hero-section d-flex align-items-center">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 order-2 order-lg-1">
+                    <h1 class="display-4 fw-bold mb-4">Собери свой идеальный бизнес-ланч</h1>
+                    <p class="lead mb-4 text-muted">
+                        Food Construct — это конструктор вкусных и полезных обедов. 
+                        Мы привезем горячую еду в любую точку города точно ко времени.
+                    </p>
+                    <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                        <a href="lunch.html" class="btn btn-tomato btn-lg px-4 me-md-2">Собрать ланч</a>
+                        <a href="#features" class="btn btn-outline-dark btn-lg px-4">Узнать больше</a>
+                    </div>
+                </div>
+                <div class="col-lg-6 order-1 order-lg-2 mb-4 mb-lg-0 text-center">
+                    <img src="images/bizneslanch.jpg" class="img-fluid rounded-4 shadow-lg hero-img" alt="Вкусный ланч">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. Преимущества (Features) -->
+    <section id="features" class="py-5 bg-light">
+        <div class="container py-4">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold">Почему выбирают нас?</h2>
+                <p class="text-muted">Мы заботимся о вашем времени и здоровье</p>
+            </div>
+            
+            <div class="row g-4">
+                <!-- Карточка 1 -->
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm p-3 text-center">
+                        <div class="card-body">
+                            <div class="feature-icon bg-tomato-soft text-tomato mb-3">
+                                <i class="bi bi-clock-history fs-2"></i>
+                            </div>
+                            <h4 class="card-title fw-bold">Точно вовремя</h4>
+                            <p class="card-text text-muted">Привозим обед к назначенному времени без опозданий. Интервал доставки — 30 минут.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Карточка 2 -->
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm p-3 text-center">
+                        <div class="card-body">
+                            <div class="feature-icon bg-tomato-soft text-tomato mb-3">
+                                <i class="bi bi-box-seam fs-2"></i>
+                            </div>
+                            <h4 class="card-title fw-bold">Удобная упаковка</h4>
+                            <p class="card-text text-muted">Надежно упаковываем блюда в герметичные контейнеры. Приборы и салфетки — бесплатно.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Карточка 3 -->
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm p-3 text-center">
+                        <div class="card-body">
+                            <div class="feature-icon bg-tomato-soft text-tomato mb-3">
+                                <i class="bi bi-emoji-smile fs-2"></i>
+                            </div>
+                            <h4 class="card-title fw-bold">Разнообразие</h4>
+                            <p class="card-text text-muted">Огромный выбор супов, горячего и салатов. Соберите тысячи комбинаций на свой вкус.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Call to Action (CTA) -->
+    <section class="cta-section py-5 bg-tomato text-white text-center">
+        <div class="container py-3">
+            <h2 class="fw-bold mb-3">Проголодались?</h2>
+            <p class="fs-5 mb-4">Не ждите! Соберите свой уникальный ланч прямо сейчас и получите скидку на первый заказ.</p>
+            <a href="lunch.html" class="btn btn-light btn-lg fw-bold text-tomato rounded-pill px-5 shadow">Перейти к меню</a>
+        </div>
+    </section>
+
+    <!-- 4. Форма обратной связи и контакты -->
+    <section id="contacts" class="py-5">
+        <div class="container py-4">
+            <div class="row g-5">
+                <!-- Контактная информация -->
+                <div class="col-lg-6">
+                    <h2 class="fw-bold mb-4">Свяжитесь с нами</h2>
+                    <p class="text-muted mb-4">Остались вопросы или есть предложения? Заполните форму, и мы свяжемся с вами в ближайшее время.</p>
+                    
+                    <div class="d-flex mb-3">
+                        <div class="flex-shrink-0 text-tomato"><i class="bi bi-geo-alt-fill fs-4"></i></div>
+                        <div class="ms-3">
+                            <h5 class="fw-bold mb-1">Адрес</h5>
+                            <p class="text-muted">г. Москва, ул. Большая Семеновская, 38</p>
+                        </div>
+                    </div>
+                    
+                    <div class="d-flex mb-3">
+                        <div class="flex-shrink-0 text-tomato"><i class="bi bi-telephone-fill fs-4"></i></div>
+                        <div class="ms-3">
+                            <h5 class="fw-bold mb-1">Телефон</h5>
+                            <p class="text-muted"><a href="tel:+79124613559" class="text-decoration-none text-muted">+7-912-461-35-59</a></p>
+                        </div>
+                    </div>
+
+                    <div class="d-flex mb-3">
+                        <div class="flex-shrink-0 text-tomato"><i class="bi bi-envelope-fill fs-4"></i></div>
+                        <div class="ms-3">
+                            <h5 class="fw-bold mb-1">Email</h5>
+                            <p class="text-muted">info@foodconstruct.ru</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Форма -->
+                <div class="col-lg-6">
+                    <form class="p-4 border rounded-4 shadow-sm bg-white">
+                        <div class="mb-3">
+                            <label for="feedbackName" class="form-label fw-bold">Ваше имя</label>
+                            <input type="text" class="form-control" id="feedbackName" placeholder="Иван Иванов">
+                        </div>
+                        <div class="mb-3">
+                            <label for="feedbackEmail" class="form-label fw-bold">Email</label>
+                            <input type="email" class="form-control" id="feedbackEmail" placeholder="name@example.com">
+                        </div>
+                        <div class="mb-3">
+                            <label for="feedbackMessage" class="form-label fw-bold">Сообщение</label>
+                            <textarea class="form-control" id="feedbackMessage" rows="4" placeholder="Ваш вопрос..."></textarea>
+                        </div>
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="checkTerms">
+                            <label class="form-check-label text-muted small" for="checkTerms">Я согласен на обработку персональных данных</label>
+                        </div>
+                        <button type="submit" class="btn btn-tomato w-100 py-2 fw-bold">Отправить</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4 text-center">
+        <div class="container">
+            <p class="mb-0">&copy; 2025 Food Construct. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

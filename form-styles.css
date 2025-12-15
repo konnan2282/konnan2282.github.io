@@ -1,0 +1,192 @@
+/* Стили для секции с формой заказа */
+.order-form-section {
+    padding: 40px 0;
+    background-color: #f9f9f9;
+}
+
+.order-form-section h2 {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 30px;
+}
+
+/* Контейнер формы */
+.order-form {
+    display: flex;
+    gap: 40px;
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Блоки внутри формы */
+.form-block {
+    flex: 1; /* Каждая колонка занимает одинаковое количетсов места */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-block h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    font-weight: 700;
+    border-bottom: 2px solid #f0f0f0;
+    padding-bottom: 10px;
+}
+
+/* label + input */
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    margin-bottom: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #555;
+}
+
+/* Стилизация полей ввода и селектов */
+.form-block input[type="text"],
+.form-block input[type="email"],
+.form-block input[type="tel"],
+.form-block input[type="time"],
+.form-block select,
+.form-block textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.form-block input:focus,
+.form-block select:focus,
+.form-block textarea:focus {
+    outline: none;
+    border-color: tomato;
+    box-shadow: 0 0 5px rgba(255, 99, 71, 0.5);
+}
+
+.form-block textarea {
+    resize: vertical; /* Разрешить изменять высоту */
+    min-height: 120px;
+}
+
+/* Группа для чекбокса */
+.checkbox-group {
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+.checkbox-group input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+}
+
+.checkbox-group label {
+    margin-bottom: 0;
+    font-weight: 400;
+}
+
+/* Группа для радиокнопок */
+.radio-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.radio-group div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.radio-group label {
+    margin-bottom: 0;
+    font-weight: 400;
+}
+
+/* Контейнер для кнопок */
+.form-buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: auto;
+}
+
+/* Общие стили для кнопок */
+.btn {
+    flex-grow: 1;
+    padding: 15px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, transform 0.2s;
+}
+
+/* Кнопка сбрасывания */
+.btn-reset {
+    background-color: #f1eee9;
+    color: #333;
+}
+
+.btn-reset:hover {
+    background-color: #e0ddd7;
+}
+
+/* Кнопка Заказать */
+.btn-submit {
+    background-color: tomato;
+    color: white;
+}
+
+.btn-submit:hover {
+    background-color: #e05a4f;
+}
+
+/* Стили для блока стоимости */
+.total-cost {
+    display: none; /* Изначально скрыт */
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+    padding-top: 20px;
+    border-top: 2px solid #ddd;
+}
+
+.total-cost h3 {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.total-cost p {
+    font-size: 22px;
+    font-weight: 700;
+    color: #333;
+}
+
+/* Адаптивность для формы */
+@media (max-width: 800px) {
+    .order-form {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .form-buttons {
+        margin-top: 20px;
+    }
+
+    .total-cost {
+        margin-top: 20px;
+    }
+}

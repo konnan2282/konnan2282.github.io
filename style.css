@@ -1,0 +1,278 @@
+/* общий стиль */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* стили для всего тела документа */
+body {
+    display: flex;
+    flex-direction: column; /* основные блоки (header, main, footer) выстраиваются в колонку */
+    min-height: 100vh;
+    font-family: 'Montserrat', sans-serif;
+    color: #333; 
+    line-height: 1.6;
+}
+
+/* стили для основного контента */
+main {
+    flex-grow: 1; /* main занимает всё доступное пространство, чтобы прижать футер */
+}
+
+/* класс для центрирования сайта*/
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* стили для шапки сайта */
+.header {
+    padding: 20px 0;
+}
+
+.header h1 {
+    font-size: 36px;
+    color: #000;
+    margin-bottom: 20px;
+}
+
+.header nav {
+    display: flex;
+    flex-wrap: wrap; /* разрешить перенос элементов на новую строку, если они не помещаются */
+    gap: 15px;
+}
+
+.header nav a {
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    color: #333;
+    transition: color 0.3s; /* когда меняется свойство color, сделать переход, длительность 0.3с */
+}
+
+.header nav a:hover {
+    color: tomato;
+}
+
+/* стиль для активной вкладки меню */
+.header nav a#active {
+    color: tomato;
+    font-weight: 700;
+}
+
+
+/* стили для основных блоков сайта */
+.main .container section {
+    margin-bottom: 40px;
+}
+
+.main h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+/* блок "О нас" */
+.about-us img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+    max-width: 800px;
+}
+
+.about-us p {
+    font-size: 16px;
+}
+
+/* блок "Преимущества" */
+.advantages ul {
+    list-style-position: inside; /* маркеры списка будут внутри блока, чтобы выглядело красивее */
+    font-size: 16px;
+}
+
+.advantages li {
+    margin-bottom: 10px;
+}
+
+/* стили для таблицы */
+.popular-dishes table {
+    width: 100%;
+    border-collapse: collapse; /* убрать двойные рамки между ячейками */
+    text-align: left; /* Выравнивание текста в ячейках по левому краю */
+}
+
+.popular-dishes th, .popular-dishes td {
+    padding: 15px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+}
+
+/* стили для футера */
+.footer {
+    background-color: black;
+    color: white;
+    padding: 30px 0;
+    margin-top: 40px;
+    font-size: 16px;
+}
+
+
+.footer a {
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    color: white;
+    transition: color 0.3s;
+}
+
+.footer a:hover {
+    color: tomato;
+}
+
+/* Контейнер для sticky бара, чтобы он был прижат к низу экрана */
+.order-bar-wrapper {
+    position: sticky;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    pointer-events: none; /* Пропускаем клики сквозь обертку */
+}
+
+/* Сам бар */
+.order-bar {
+    display: none; /* Скрыт по умолчанию */
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 15px 30px;
+    border-radius: 20px;
+    box-shadow: 0 -5px 20px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    pointer-events: auto; /* Включаем клики для бара */
+}
+
+.order-bar-info {
+    font-size: 20px;
+    font-weight: 700;
+    color: #333;
+}
+
+.order-bar .btn {
+    max-width: 250px;
+    text-decoration: none;
+    text-align: center;
+}
+
+/* Ссылка недоступна (серая) */
+.btn-disabled {
+    background-color: #ccc !important;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+/* Стили для страницы Order.html */
+
+/* Кнопка удаления в карточке */
+.delete-button {
+    background-color: tomato;
+    color: white;
+    border: none;
+    padding: 10px 30px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    margin-top: auto;
+    transition: background-color 0.3s;
+}
+
+.delete-button:hover {
+    background-color: #e05a4f;
+}
+
+/* Список в форме */
+.order-summary-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+    font-size: 14px;
+}
+
+.order-summary-item span:first-child {
+    font-weight: 600;
+    color: #555;
+}
+
+.order-summary-item span:last-child {
+    font-weight: 700;
+    color: #000;
+    max-width: 60%;
+    text-align: right;
+}
+
+/* Класс для активной (выбранной) карточки */
+.dish-card.active-card {
+    border: 2px solid tomato;
+}
+
+.dish-card {
+    cursor: pointer;
+    transition: border-color 0.3s ease;
+}
+
+/* Адаптивность */
+
+/* ширина экрана до 800px */
+@media (max-width: 800px) {
+    .header h1 {
+        text-align: center;
+    }
+    
+    .header nav {
+        justify-content: space-between; /* распределяем ссылки по краям */
+    }
+
+    /* главная страница */
+    .about-us img {
+        width: 500px;
+    }
+}
+
+/* ширина экрана до 600px */
+@media (max-width: 600px) {
+    .header nav {
+        flex-direction: column; /* навигация становится вертикальной */
+        align-items: center;
+        gap: 10px;
+    }
+
+    .header nav a {
+        font-size: 22px; /* увеличиваем шрифт */
+    }
+
+    .main h2 {
+        text-align: center;
+    }
+
+    /* главная страница */
+    .about-us img {
+        width: 100%; /* картинка занимает всю ширину контейнера */
+    }
+
+    .popular-dishes th, .popular-dishes td {
+        font-size: 14px; /* уменьшаем шрифт в таблице */
+    }
+}
+
+/* ширина экрана до 400px */
+@media (max-width: 400px) {
+    .popular-dishes th, .popular-dishes td {
+        font-size: 12px; /* уменьшаем шрифт в таблице */
+        padding: 8px;
+    }
+}

@@ -1,0 +1,283 @@
+
+* Таблица заказов */
+.orders-section h2 {
+    margin-bottom: 30px;
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.table-wrapper {
+    overflow-x: auto; /* Прокрутка на мобильных */
+}
+
+.orders-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.orders-table th, 
+.orders-table td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+    font-size: 14px;
+}
+
+.orders-table th {
+    background-color: #f9f9f9;
+    font-weight: 700;
+    color: #333;
+}
+
+.orders-table td {
+    vertical-align: middle;
+}
+
+/* Кнопки действий в таблице */
+.action-icons {
+    display: flex;
+    gap: 10px;
+}
+
+.action-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    transition: transform 0.2s;
+    padding: 5px;
+}
+
+.action-btn:hover {
+    transform: scale(1.2);
+}
+
+/* Модальные окна */
+.modal {
+    display: none; /* Скрыто по умолчанию */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal.show {
+    display: flex;
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: auto;
+    padding: 30px;
+    border-radius: 20px;
+    width: 90%;
+    max-width: 600px;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    animation: fadeIn 0.3s;
+    max-height: 90vh;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.small-modal {
+    max-width: 400px;
+    text-align: center;
+}
+
+.close-btn {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    top: 15px;
+}
+
+.close-btn:hover {
+    color: tomato;
+}
+
+/* Стили внутри модальных окон */
+.modal-info-grid h4 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 5px;
+}
+
+.modal-info-grid p {
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+#view-dishes-list {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin-bottom: 15px;
+}
+
+.modal-total-cost {
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+    font-weight: 700;
+    margin-top: 20px;
+    border-top: 2px solid tomato;
+    padding-top: 10px;
+}
+
+/* Стили для уведомлений (Notification Modal) */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+}
+
+.modal-container {
+    background-color: white;
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3); /* Добавил тень для красоты */
+    max-width: 400px; /* Ограничение ширины */
+    width: 90%;
+}
+
+.modal-text {
+    font-size: 18px;
+    margin-bottom: 20px;
+    font-weight: 600;
+    color: #333;
+}
+
+/* Футер с кнопками */
+.modal-footer {
+    margin-top: 25px;
+    display: flex;
+    justify-content: center; /* Центрируем кнопки по горизонтали */
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+}
+
+/* Переопределяем стили кнопок внутри модального окна, чтобы они были маленькими */
+.modal-footer .btn {
+    padding: 8px 25px; /* Уменьшенные отступы внутри кнопки */
+    font-size: 14px; /* Уменьшенный шрифт */
+    flex-grow: 0; /* Запрещаем растягиваться на всю ширину */
+    min-width: 120px; /* Минимальная ширина для аккуратности */
+    border-radius: 6px; /* Чуть менее скругленные углы */
+    height: auto; /* Автоматическая высота */
+}
+
+/* Цвета кнопок */
+.btn-secondary {
+    background-color: #f1eee9;
+    color: #333;
+    border: none;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    transition: background-color 0.3s;
+}
+
+.btn-secondary:hover {
+    background-color: #e0ddd7;
+}
+
+.btn-danger {
+    background-color: tomato;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    transition: background-color 0.3s;
+}
+
+.btn-danger:hover {
+    background-color: #d1493e;
+}
+
+/* Анимация появления */
+@keyframes fadeIn {
+    from {opacity: 0; transform: translateY(-20px);}
+    to {opacity: 1; transform: translateY(0);}
+}
+
+/* Адаптив */
+@media (max-width: 600px) {
+    .orders-table thead {
+        display: none;
+    }
+    .orders-table, .orders-table tbody, .orders-table tr, .orders-table td {
+        display: block;
+        width: 100%;
+    }
+    .orders-table tr {
+        margin-bottom: 15px;
+        border: 1px solid #eee;
+        border-radius: 10px;
+        padding: 10px;
+    }
+    .orders-table td {
+        padding: 5px 10px;
+        border: none;
+        text-align: right;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .orders-table td::before {
+        content: attr(data-label);
+        font-weight: 700;
+        text-align: left;
+        margin-right: 10px;
+    }
+    .action-icons {
+        justify-content: flex-end;
+    }
+    
+    /* На мобильных кнопки могут встать друг под друга, если места мало */
+    .modal-footer {
+        flex-wrap: wrap;
+    }
+}
+
+#edit-form {
+    flex-direction: column; 
+    gap: 0;
+}
+
+/* Убираем лишние отступы у блока с полями, чтобы он занимал всю ширину */
+#edit-form .form-block {
+    width: 100% !important; /* Принудительно на всю ширину */
+    margin-bottom: 20px;
+}
+
+/* На всякий случай убедимся, что футер тоже занимает всю ширину */
+.modal-footer {
+    width: 100%;
+    margin-top: 20px;
+}
